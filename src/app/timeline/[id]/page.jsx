@@ -9,13 +9,26 @@ import { CiVideoOn } from "react-icons/ci";
 import { FaArchive } from "react-icons/fa";
 import { MdDelete } from "react-icons/md";
 import { CallContext } from './../../context/CallContextProvider';
+import { toast } from "react-toastify";
 
 const DetailsPage = () => {
     const { id } = useParams();
     const [friend, setFriend] = useState(null);
     const [loading, setLoading] = useState(true);
-    const something=useContext(CallContext);
-    console.log(something , "de");
+    const {call,setCall}=useContext(CallContext);
+    const handleCall=(type)=>{
+        if(call.find(c=>c.id===friend.id)){
+            toast.error("already added")
+            return
+        }
+        setCall([...call,{
+            id: friend.id,
+            name: friend.name,
+            type: type,
+            data: friend.next_due_date
+        }])
+        toast(`${type} now`)
+    }
 
     useEffect(() => {
         fetch("/friends.json")
@@ -101,15 +114,15 @@ const DetailsPage = () => {
                         <div>
                             <h3 className="text-[#244d3f] text-xl font-semibold mb-4">Quick Check-In</h3>
                             <div className="grid grid-cols-3 gap-4">
-                                <div className='bg-white p-6 flex flex-col justify-center items-center rounded-lg shadow-lg'>
+                                <div onClick={()=>handleCall("Calling")} className='bg-white p-6 flex flex-col justify-center items-center rounded-lg shadow-lg'>
                                     <FiPhoneCall className="text-2xl mb-2" />
                                     <p className='text-[#1f2937] font-bold'>Call</p>
                                 </div>
-                                <div className='bg-white p-6 flex flex-col justify-center items-center rounded-lg shadow-lg'>
+                                <div onClick={()=>handleCall("Textting")} className='bg-white p-6 flex flex-col justify-center items-center rounded-lg shadow-lg'>
                                     <MdOutlineTextsms className="text-2xl mb-2"/>
                                     <p className='text-[#1f2937] font-bold'>Text</p>
                                 </div>
-                                <div className='bg-white p-6 flex flex-col justify-center items-center rounded-lg shadow-lg'>
+                                <div onClick={()=>handleCall("Video")} className='bg-white p-6 flex flex-col justify-center items-center rounded-lg shadow-lg'>
                                     <CiVideoOn className="text-2xl mb-2" />
                                     <p className='text-[#1f2937] font-bold'>Video</p>
                                 </div>
