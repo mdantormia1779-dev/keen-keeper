@@ -4,7 +4,7 @@ import { FaPlus } from "react-icons/fa";
 
 const Banner = () => {
     return (
-        <div className='container mx-auto p-4 lg:p-0'>
+        <div className='container mx-auto p-4 lg:p-10'>
             <div className='flex flex-col justify-center items-center text-center mb-10'>
                 <div>
                     <h1 className='mb-4 text-2xl lg:text-5xl font-semibold text-[#1f2937]'>Friends to keep close in your life</h1>

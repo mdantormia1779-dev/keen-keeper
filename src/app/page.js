@@ -20,7 +20,7 @@ export default function Home() {
       <div className="bg-[#f8fafc] py-20">
         <div>
           <Banner></Banner>
-          <div className="container mx-auto p-4 lg:p-0">
+          <div className="container mx-auto p-4">
             <h1 className="font-bold text-[#1f2937] text-2xl">Your Friends</h1>
             <div className="mt-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {loading ? (

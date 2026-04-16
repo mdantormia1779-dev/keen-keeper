@@ -20,7 +20,7 @@ const Navbar = () => {
     </>
     return (
         <div className='bg-base-100 shadow-sm'>
-            <div className="navbar flex justify-between container mx-auto">
+            <div className="navbar flex justify-between container mx-auto lg:px-10">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -32,7 +32,7 @@ const Navbar = () => {
                             {li}
                         </ul>
                     </div>
-                    <a className="text-2xl text-[#1f2937] font-bold">KeenKeeper</a>
+                    <Link href={"/"} className="text-2xl text-[#1f2937] font-bold">KeenKeeper</Link>
                 </div>
                 <div className="hidden lg:flex">
                     <ul className="menu menu-horizontal px-1 space-x-4">
