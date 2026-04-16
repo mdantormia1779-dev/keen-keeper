@@ -15,19 +15,30 @@ const DetailsPage = () => {
     const { id } = useParams();
     const [friend, setFriend] = useState(null);
     const [loading, setLoading] = useState(true);
-    const {call,setCall}=useContext(CallContext);
-    const handleCall=(type)=>{
-        if(call.find(c=>c.id===friend.id)){
-            toast.error("already added")
-            return
-        }
-        setCall([...call,{
+    const { call, setCall } = useContext(CallContext);
+    const handleCall = (type) => {
+        // if (call.find(c => c.id === friend.id)) {
+        //     toast.error("already added")
+        //     return
+        // }
+        setCall([...call, {
             id: friend.id,
             name: friend.name,
             type: type,
             data: friend.next_due_date
         }])
-        toast(`${type} now`)
+        if (type === "Calling") {
+            toast(`${type} with ${friend.name}`)
+        }
+        else if (type === "Texting") {
+            toast(`${type} with ${friend.name}`)
+
+        }
+        else {
+            toast(`${type} with ${friend.name}`)
+
+        }
+
     }
 
     useEffect(() => {
@@ -103,7 +114,7 @@ const DetailsPage = () => {
                         </div>
                         <div className="bg-white p-4 shadow-lg rounded-lg">
                             <div className="flex justify-center items-center gap-2">
-                                <MdDelete className="text-[#ef4444] text-2xl"/>
+                                <MdDelete className="text-[#ef4444] text-2xl" />
                                 <h1 className="text-[#ef4444] font-bold">Delete</h1>
                             </div>
                         </div>
@@ -114,15 +125,15 @@ const DetailsPage = () => {
                         <div>
                             <h3 className="text-[#244d3f] text-xl font-semibold mb-4">Quick Check-In</h3>
                             <div className="grid grid-cols-3 gap-4">
-                                <div onClick={()=>handleCall("Calling")} className='bg-white p-6 flex flex-col justify-center items-center rounded-lg shadow-lg'>
+                                <div onClick={() => handleCall("Calling")} className='bg-white p-6 flex flex-col justify-center items-center rounded-lg shadow-lg'>
                                     <FiPhoneCall className="text-2xl mb-2" />
                                     <p className='text-[#1f2937] font-bold'>Call</p>
                                 </div>
-                                <div onClick={()=>handleCall("Textting")} className='bg-white p-6 flex flex-col justify-center items-center rounded-lg shadow-lg'>
-                                    <MdOutlineTextsms className="text-2xl mb-2"/>
+                                <div onClick={() => handleCall("Textting")} className='bg-white p-6 flex flex-col justify-center items-center rounded-lg shadow-lg'>
+                                    <MdOutlineTextsms className="text-2xl mb-2" />
                                     <p className='text-[#1f2937] font-bold'>Text</p>
                                 </div>
-                                <div onClick={()=>handleCall("Video")} className='bg-white p-6 flex flex-col justify-center items-center rounded-lg shadow-lg'>
+                                <div onClick={() => handleCall("Video")} className='bg-white p-6 flex flex-col justify-center items-center rounded-lg shadow-lg'>
                                     <CiVideoOn className="text-2xl mb-2" />
                                     <p className='text-[#1f2937] font-bold'>Video</p>
                                 </div>
