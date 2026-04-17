@@ -21,7 +21,7 @@ const Page = () => {
         return order[a.type] - order[b.type];
     })
     return (
-        <div className="bg-[#f8fafc] py-20">
+        <div className="bg-[#f8fafc] py-20 p-4 md:p-6">
             <div className='container mx-auto'>
                 <h1 className="font-bold text-5xl text-[#1f2937]">Timeline </h1>
                 <div className='mt-4'>
@@ -36,7 +36,7 @@ const Page = () => {
                     </div>
                 </div>
                 <div className='mt-6'>
-                    <div className='space-y-4 border border-black'>
+                    <div className='space-y-4 border border-black p-4 rounded-lg'>
                         {sortedData.length === 0 ? (
                             <div className='p-20 bg-white rounded-lg flex justify-center gap-4 items-center shadow-lg'>
                                 <p>data not added</p>

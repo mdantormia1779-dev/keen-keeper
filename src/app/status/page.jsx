@@ -26,9 +26,9 @@ const Page = () => {
     const isEmpty = chartData.every(item => item.value === 0);
 
     return (
-        <div className="bg-[#f8fafc] py-20">
+        <div className="bg-[#f8fafc] py-20 p-6">
             <div className='container mx-auto text-center border border-gray-300 p-4 rounded-lg'>
-                <h1 className="font-bold text-5xl text-[#1f2937] mb-6">
+                <h1 className="font-bold text-xl md:text-5xl text-[#1f2937] mb-6">
                     Friendship Analytics
                 </h1>
 

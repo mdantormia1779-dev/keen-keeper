@@ -62,8 +62,8 @@ const DetailsPage = () => {
 
     return (
         <div className="bg-[#f8fafc]">
-            <div className="py-20 container mx-auto">
-                <div className="grid grid-cols-5 gap-6">
+            <div className="py-20 container mx-auto p-6">
+                <div className="lg:grid grid-cols-5 flex flex-col gap-6">
 
                     {/* div1 */}
                     <div className="col-span-2 row-span-2">
@@ -144,15 +144,15 @@ const DetailsPage = () => {
                     {/* div5 */}
                     <div className="col-start-3 row-start-1">
                         <div className='bg-white p-8 flex flex-col justify-center items-center rounded-lg shadow-lg'>
-                            <h1 className='font-semibold text-3xl mb-2'>{friend.days_since_contact}</h1>
-                            <p className='text-[#64748b]'>Days Since Contact</p>
+                            <h1 className='font-semibold text-xl xl:text-2xl'>{friend.days_since_contact}</h1>
+                            <p className='text-[#64748b] text-sm text-center'>Days Since Contact</p>
                         </div>
                     </div>
 
                     {/* div6 */}
                     <div className="col-start-4 row-start-1">
                         <div className='bg-white p-8 flex flex-col justify-center items-center rounded-lg shadow-lg'>
-                            <h1 className='font-semibold text-3xl mb-2'>{friend.goal}</h1>
+                            <h1 className='font-semibold text-xl xl:text-2xl mb-2'>{friend.goal}</h1>
                             <p className='text-[#64748b]'>Goal (Days)</p>
                         </div>
                     </div>
@@ -160,7 +160,7 @@ const DetailsPage = () => {
                     {/* div7 */}
                     <div className="col-start-5 row-start-1">
                         <div className='bg-white p-8 flex flex-col justify-center items-center rounded-lg shadow-lg'>
-                            <h1 className='font-semibold text-3xl mb-2'>{friend.next_due_date}</h1>
+                            <h1 className='font-semibold text-xl xl:text-2xl mb-2'>{friend.next_due_date}</h1>
                             <p className='text-[#64748b]'>Next Due</p>
                         </div>
                     </div>
