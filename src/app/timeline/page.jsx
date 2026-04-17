@@ -36,14 +36,14 @@ const Page = () => {
                     </div>
                 </div>
                 <div className='mt-6'>
-                    <div className='space-y-4'>
+                    <div className='space-y-4 border border-black'>
                         {sortedData.length === 0 ? (
-                            <div className='p-20 bg-white rounded-lg flex gap-4 items-center shadow-lg'>
+                            <div className='p-20 bg-white rounded-lg flex justify-center gap-4 items-center shadow-lg'>
                                 <p>data not added</p>
                             </div>
                         ) : (
                             sortedData.map(data => (
-                                <div key={data.id} className='p-4 bg-white rounded-lg flex gap-4 items-center shadow-lg'>
+                                <div key={data.id} className='p-4 boder border-gray-300 bg-white rounded-lg flex gap-4 items-center shadow-lg'>
                                     <div>
                                         {data.type === "Calling" && <FiPhoneCall className="text-2xl mb-2" />}
                                         {data.type === "Textting" && <MdOutlineTextsms className="text-2xl mb-2" />}

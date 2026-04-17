@@ -28,14 +28,14 @@ const DetailsPage = () => {
             data: friend.next_due_date
         }])
         if (type === "Calling") {
-            toast(`${type} with ${friend.name}`)
+            toast.success(`${type} with ${friend.name}`)
         }
         else if (type === "Texting") {
-            toast(`${type} with ${friend.name}`)
+            toast.success(`${type} with ${friend.name}`)
 
         }
         else {
-            toast(`${type} with ${friend.name}`)
+            toast.success(`${type} with ${friend.name}`)
 
         }
 
