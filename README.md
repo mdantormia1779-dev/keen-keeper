@@ -1,36 +1,55 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+👥 KeenKeeper
 
-## Getting Started
+📌 Project Description
+KeenKeeper is a modern friendship management web application designed to help users stay connected with their friends and maintain healthy communication habits.
+The app displays a list of users (friends), where each user has a detailed profile page. When a user clicks on a friend card, they are redirected to that friend’s Details Page, where they can view full information such as profile picture, bio, email, tags, contact status, and relationship goals.
+On the details page, users can interact with three quick action buttons: Call, Text, and Video. When any of these buttons are clicked, a new entry is automatically added to the Timeline Page, recording the interaction type, friend name, and current date. A toast notification is also shown for immediate user feedback.
+The project also includes a Timeline Page, where all interactions are displayed in chronological order. Users can filter these interactions based on type (Call, Text, or Video) to easily track communication history.
+To make the app more insightful, a Statistics / Analytics Page is included. This page visually represents user interactions using a Pie Chart, showing the distribution of calls, texts, and video interactions using Recharts.
+Overall, KeenKeeper focuses on improving relationship tracking through a clean UI, responsive design, interactive user experience, and real-time activity logging.
 
-First, run the development server:
+🛠️ Technologies Used
+⚛️ Next.js
+🎨 Tailwind CSS
+💠 DaisyUI
+🎯 React Icons
+📊 Recharts
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+⭐ Key Features
+👥 User / Friend List System
+Displays multiple users as interactive friend cards
+Clicking a card opens a detailed user profile page
+👤 Friend Details Page
+Shows full user information (photo, bio, email, tags, status, goals)
+Includes quick action buttons: Call, Text, Video
+⚡ Interactive Call / Text / Video System
+Clicking any action button creates a new activity
+Automatically adds entry to the Timeline
+Shows toast notification on every interaction
+📜 Timeline System
+Tracks all interactions (Call, Text, Video)
+Displays date, icon, and title for each activity
+Helps users view communication history
+🔍 Filter System (Timeline Page)
+Filter timeline by:
+📞 Call
+💬 Text
+🎥 Video
+Makes it easy to find specific interaction types
+📊 Analytics Dashboard
+Pie chart showing distribution of Call / Text / Video
+Built using Recharts for visual insights
+📱 Fully Responsive Design
+Works smoothly on mobile, tablet, and desktop
+🔔 Toast Notifications
+Instant feedback when user performs any interaction
+❌ 404 Page
+Handles invalid routes with a custom design
+⏳ Loading State
+Shows loader while fetching user data
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+🚀 Project Goal
+KeenKeeper helps users manage friendships digitally by tracking communication habits, improving consistency, and visualizing interaction patterns in a simple and beautiful interface.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
